@@ -11,14 +11,11 @@ struct InboxRowView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             // Image
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 64, height: 64)
-                .foregroundColor(Color(.systemGray4))
+            CircularProfileImageView(user: User.MOCK_USER, size: .medium)
             
             VStack (alignment: .leading, spacing: 4){
                 // Person name
-                Text("Bruce")
+                Text(User.MOCK_USER.fullName)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 
